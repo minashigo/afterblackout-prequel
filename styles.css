@@ -1,4 +1,4 @@
-/* --- Root Variables --- */
+/* --- Root Variables (Оригінальні для англійської версії) --- */
 :root {
     --bg: #050709;
     --accent: #E66827;
@@ -35,6 +35,7 @@ body {
     align-items: center; 
 }
 
+/* Стандартний заголовок (для англійської версії) */
 h1 { 
     font-family: var(--font-head); 
     font-size: 48px; 
@@ -140,26 +141,26 @@ h1 {
     mask-image: linear-gradient(to top, black, transparent); 
 }
 
-/* --- Стилізація заголовка під обкладинку (Українська версія) --- */
-h1.grunge-title {
-    font-family: var(--font-head);
-    font-size: 52px;
-    font-weight: bold;
-    line-height: 1.05;
-    margin-bottom: 1rem;
+/* --- УНІКАЛЬНИЙ СТИЛЬ ДЛЯ УКРАЇНСЬКОГО ЗАГОЛОВКА (масивний, високий, сталкерський) --- */
+.ua-grunge-title {
+    font-family: 'Teko', sans-serif !important;
+    font-size: 64px !important;
+    font-weight: 700;
+    line-height: 0.9;
+    margin-bottom: 1.2rem;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    transform: scaleY(1.3);
-    transform-origin: left;
+    letter-spacing: 1px;
 }
 
-h1.grunge-title span {
-    background: linear-gradient(180deg, #d4e6f1 20%, #85929e 70%, #5d6d7e 100%);
+.ua-grunge-title span {
+    /* Градієнт під світлу металеву текстуру обкладинки */
+    background: linear-gradient(180deg, #eaf2f8 20%, #85929e 80%, #566573 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.9));
-    letter-spacing: 2px;
+    /* Потужна тінь для створення об'єму і читабельності на темному фоні */
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.95));
 }
 
 /* --- Thank You Page Specific Styles --- */
@@ -215,5 +216,5 @@ h1.grunge-title span {
     .hero { padding-top: 2rem; }
     .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
     h1 { font-size: 32px; }
-    h1.grunge-title { transform: none; font-size: 38px; }
+    .ua-grunge-title { font-size: 48px !important; }
 }
